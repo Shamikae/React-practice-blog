@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './NavBar';
 import Home from './Home';
 
@@ -9,7 +8,7 @@ function App() {
         <NavBar/>
         
       <div className="content">
-          <h1> {title}</h1>
+          {/* <h1> {title}</h1> */}
           <Home/>
       </div>
     </div>
