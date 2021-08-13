@@ -36,6 +36,7 @@ const Home = () => {
             <p>{name} is {age} years old </p>
             <button onClick={clickChange}>Change Name</button>
             <BlogList blogs={blogs} title="All Blogs"/> {/* Prop */}
+            <BlogList blogs={blogs.filter((blog) => blog.author === 'kim' )} title="Mika's Blogs"/> {/* blogs - Props allow you to pass data from parent component to child component */}
         </div>
     );
 }

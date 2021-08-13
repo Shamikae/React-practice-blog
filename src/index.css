@@ -40,7 +40,9 @@
     border-bottom: 1px solid #fafafa;
 }
 .blog-preview:hover{
- box-shadow: 1px 3px 5px rgba(0, 0, 0,.1);   
+ box-shadow: 1px 3px 5px rgba(0, 0, 0,.1); 
+ border-style: solid;  
+ border-radius: 50px;
 }
 .blog-preview h2{
     font-size: 20px;
