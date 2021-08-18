@@ -31,9 +31,12 @@ const Home = () => {
         setBlogs(newBlogs);
     }
 
+    const [name1, setName1] = useState('mario');
+
     useEffect(() =>{
-        console.log('use effect ran')
-    });
+        console.log('use effect ran');
+        console.log(name1);
+    }, [name1] ); /*hook occurs after every render when state changes. dependencies effect when it runs*/
 
     return (
         <div className="home">
@@ -44,6 +47,8 @@ const Home = () => {
             <button onClick={clickChange}>Change Name</button>
             <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete}/> {/* Prop */}
             <BlogList blogs={blogs.filter((blog) => blog.author === 'kim' )} title="Mika's Blogs"/> {/* blogs - Props allow you to pass data from parent component to child component */}
+            <button onClick={() => setName1('sham')}>change name</button>
+            <p>{name1}</p>
         </div>
     );
 }
